@@ -23,7 +23,7 @@
         "children": [],
         "isRemovable": true,
         "filePath": "hh/lambda.js",
-        "code": "let AWS = require('aws-sdk');\nconst cognito_idp = new AWS.CognitoIdentityServiceProvider();\n\nexports.handler = function (event, context, callback) {\n\n    cognito_idp.listUsers({\n        UserPoolId: process.env.UserPoolId_cognitotesthirudinee,\n        Limit: 10\n    }, function (error, data) {\n        if (error) {\n            // implement error handling logic here\n            throw error;\n        }\n        // your logic goes within this block\n    });\n\n\n    callback(null, { \"message\": \"Successfully executed\" });\n}",
+        "code": "let AWS = require('aws-sdk');\nconst ddb = new AWS.DynamoDB.DocumentClient();\nconst cognito_idp = new AWS.CognitoIdentityServiceProvider();\n\nexports.handler = function (event, context, callback) {\n\n    cognito_idp.listUsers({\n        UserPoolId: process.env.UserPoolId_cognitotesthirudinee,\n        Limit: 10\n    }, function (error, data) {\n        if (error) {\n            // implement error handling logic here kkk\n            throw error;\n        }\n        // your logic goes within this block\n    });\n    ddb.query({\n        TableName: 'yyy'\n        , ExpressionAttributeValues: { ':jj': 'kk ' }, KeyConditionExpression: 'jjj < :jj', FilterExpression: 'nn n nmn = :jj'\n    }).promise()\n        .then((data) => {\n            //your logic goes here\n        })\n        .catch((err) => {\n            //handle error\n        });\n\n\n\n    callback(null, { \"message\": \"Successfully executed\" });\n}",
         "config": {
           "runtime": "nodejs8.10",
           "handler": "handler",
@@ -204,12 +204,61 @@
                 "Required": false
               }
             ],
+            "SmsConfiguration": {
+              "SnsCallerArn": {
+                "Fn::GetAtt": [
+                  "testhirudineeSmsRole",
+                  "Arn"
+                ]
+              },
+              "ExternalId": "testhirudinee"
+            },
+            "SmsAuthenticationMessage": "Your auth message is {####}",
+            "SmsVerificationMessage": "this is a test {####}",
             "AdminCreateUserConfig": {
               "AllowAdminCreateUserOnly": false,
               "UnusedAccountValidityDays": 7,
               "InviteMessageTemplate": {}
             }
           }
+        }
+      },
+      "ddbyyy": {
+        "name": "ddbyyy",
+        "type": "DynamoDB",
+        "config": {
+          "mode": 0,
+          "operation": "query",
+          "table": {
+            "arn": "",
+            "name": "yyy",
+            "partitionKey": "jjj",
+            "partitionKeyType": "S",
+            "hasSortKey": false,
+            "sortKey": "",
+            "sortKeyType": "S",
+            "payPerRequest": true,
+            "mode": 0
+          },
+          "isGlobalEditMode": false,
+          "parameters": {
+            "Key": {},
+            "Item": {
+              "jjj": "    ",
+              "kj knk": ""
+            },
+            "ExpressionAttributeValues": {
+              ":jj": "kk "
+            },
+            "KeyConditionExpression": "jjj < :jj",
+            "FilterExpression": "nn n nmn = :jj"
+          },
+          "triggerParams": {},
+          "validator": {
+            "validatableFields": {},
+            "validity": true
+          },
+          "valid": true
         }
       }
     },
@@ -246,7 +295,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1571982934027
+    "lastSave": 1571991652886
   },
   "VCS_STATE": {
     "provider": "GitHub",
