@@ -23,7 +23,7 @@
         "children": [],
         "isRemovable": true,
         "filePath": "hh/lambda.js",
-        "code": "let AWS = require('aws-sdk');\nconst kinesis = new AWS.Kinesis();\nconst ddb = new AWS.DynamoDB.DocumentClient();\nconst cognito_idp = new AWS.CognitoIdentityServiceProvider();\n\nexports.handler = function (event, context, callback) {\n\n    kinesis.describeStream({\n        StreamName: 'HiruTest'\n    }).promise()\n        .then(data => {\n            // your logic goes here\n        })\n        .catch(err => {\n            // error handling goes here\n        });\n\n\n\n    callback(null, { \"message\": \"Successfully executed\" });\n}",
+        "code": "let AWS = require('aws-sdk');\nconst kinesis = new AWS.Kinesis();\nconst ddb = new AWS.DynamoDB.DocumentClient();\nconst cognito_idp = new AWS.CognitoIdentityServiceProvider();\n\nexports.handler = function (event, context, callback) {\n\n    callback(null, { \"message\": \"Successfully executed\" });\n}",
         "config": {
           "runtime": "nodejs8.10",
           "handler": "handler",
@@ -33,8 +33,18 @@
         },
         "triggers": [
           {
-            "resourceName": "apigusEast1SIGMA733teestingget",
-            "config": {}
+            "resourceName": "kinesisHiruTest",
+            "config": {
+              "StartingPosition": "TRIM_HORIZON",
+              "BatchSize": "100"
+            }
+          },
+          {
+            "resourceName": "kinesishirutest2",
+            "config": {
+              "StartingPosition": "TRIM_HORIZON",
+              "BatchSize": "100"
+            }
           }
         ]
       },
@@ -57,42 +67,32 @@
     ],
     "currentFileId": "3e00dc62-0c68-4449-8201-ef3ba1ffe300",
     "resources": {
-      "apigusEast1SIGMA733teestingget": {
-        "name": "apigusEast1SIGMA733teestingget",
-        "type": "API_GATEWAY",
-        "config": {
-          "selectedRegion": "us-east-1",
-          "apiMode": 1,
-          "apiName": "SIGMA-733",
-          "apiId": "2ey3pzw7tg",
-          "endpointType": "EDGE",
-          "rootResourceId": "xlercklid0",
-          "existingResources": {
-            "/SIGMA-733": "4mkt7n",
-            "/testhiru": "kountn",
-            "/test002": "pyv6hl",
-            "/": "xlercklid0"
-          },
-          "resourceMode": 0,
-          "resourceName": "teesting",
-          "resourcePath": "/teesting",
-          "restMethod": "GET",
-          "proxyIntegration": false,
-          "enableCORS": false,
-          "stageMode": 0,
-          "stageName": "Test",
-          "mode": 1
-        }
-      },
       "kinesisHiruTest": {
         "name": "kinesisHiruTest",
         "type": "Kinesis",
         "config": {
-          "mode": 0,
+          "mode": 1,
           "StreamName": "HiruTest",
           "shards": 1,
           "region": "us-east-1",
-          "operation": "describe-stream"
+          "triggerParams": {
+            "StartingPosition": "TRIM_HORIZON",
+            "BatchSize": "100"
+          }
+        }
+      },
+      "kinesishirutest2": {
+        "name": "kinesishirutest2",
+        "type": "Kinesis",
+        "config": {
+          "mode": 0,
+          "StreamName": "hirutest2",
+          "shards": 1,
+          "region": "us-east-1",
+          "triggerParams": {
+            "StartingPosition": "TRIM_HORIZON",
+            "BatchSize": "100"
+          }
         }
       }
     },
@@ -129,7 +129,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1571992415765
+    "lastSave": 1571992638415
   },
   "VCS_STATE": {
     "provider": "GitHub",
