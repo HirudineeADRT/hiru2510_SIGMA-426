@@ -14,7 +14,13 @@
           "1537c51f-82b7-4967-9392-2956141c2759",
           "d200a121-3b34-42e8-ad91-5efd116fdad7",
           "14aeb6d5-fee4-4e4d-9173-f773eaa5d600",
-          "7471b695-37f6-4e78-867c-872fb0aa84f1"
+          "7471b695-37f6-4e78-867c-872fb0aa84f1",
+          "20c66946-dd03-452a-beb8-abe8e9f69b49",
+          "a855cac3-8121-4911-956f-b3c874ce6239",
+          "9a2d24c2-36cc-4a35-8b8c-14414028acc4",
+          "e5c31757-adaa-4f00-bab6-0f8137ae9920",
+          "2064bb37-c44e-4f42-934f-9d3bd3a6fe9d",
+          "6a231ffc-1633-4eb2-bd1d-09d01277df9b"
         ],
         "isRemovable": false,
         "filePath": "hh"
@@ -143,6 +149,120 @@
           "layers": []
         },
         "triggers": []
+      },
+      "20c66946-dd03-452a-beb8-abe8e9f69b49": {
+        "id": "20c66946-dd03-452a-beb8-abe8e9f69b49",
+        "parent": "db271195-2710-48d5-8540-8d3e11d026c5",
+        "name": "qw.js",
+        "type": "JS_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "hh/qw.js",
+        "code": "exports.handler = function(event, context, callback) {\n    \n    callback(null, {\"message\": \"Successfully executed\"});\n}",
+        "config": {
+          "runtime": "nodejs8.10",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": []
+        },
+        "triggers": []
+      },
+      "a855cac3-8121-4911-956f-b3c874ce6239": {
+        "id": "a855cac3-8121-4911-956f-b3c874ce6239",
+        "parent": "db271195-2710-48d5-8540-8d3e11d026c5",
+        "name": "ww.js",
+        "type": "JS_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "hh/ww.js",
+        "code": "exports.handler = function(event, context, callback) {\n    \n    callback(null, {\"message\": \"Successfully executed\"});\n}",
+        "config": {
+          "runtime": "nodejs8.10",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": []
+        },
+        "triggers": []
+      },
+      "9a2d24c2-36cc-4a35-8b8c-14414028acc4": {
+        "id": "9a2d24c2-36cc-4a35-8b8c-14414028acc4",
+        "parent": "db271195-2710-48d5-8540-8d3e11d026c5",
+        "name": "qwqw.js",
+        "type": "JS_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "hh/qwqw.js",
+        "code": "exports.handler = function(event, context, callback) {\n    \n    callback(null, {\"message\": \"Successfully executed\"});\n}",
+        "config": {
+          "runtime": "nodejs8.10",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": []
+        },
+        "triggers": []
+      },
+      "e5c31757-adaa-4f00-bab6-0f8137ae9920": {
+        "id": "e5c31757-adaa-4f00-bab6-0f8137ae9920",
+        "parent": "db271195-2710-48d5-8540-8d3e11d026c5",
+        "name": "wwww.js",
+        "type": "JS_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "hh/wwww.js",
+        "code": "exports.handler = function(event, context, callback) {\n    \n    callback(null, {\"message\": \"Successfully executed\"});\n}",
+        "config": {
+          "runtime": "nodejs8.10",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": []
+        },
+        "triggers": []
+      },
+      "2064bb37-c44e-4f42-934f-9d3bd3a6fe9d": {
+        "id": "2064bb37-c44e-4f42-934f-9d3bd3a6fe9d",
+        "parent": "db271195-2710-48d5-8540-8d3e11d026c5",
+        "name": "qjj.js",
+        "type": "JS_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "hh/qjj.js",
+        "code": "exports.handler = function(event, context, callback) {\n    \n    callback(null, {\"message\": \"Successfully executed\"});\n}",
+        "config": {
+          "runtime": "nodejs8.10",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": []
+        },
+        "triggers": []
+      },
+      "6a231ffc-1633-4eb2-bd1d-09d01277df9b": {
+        "id": "6a231ffc-1633-4eb2-bd1d-09d01277df9b",
+        "parent": "db271195-2710-48d5-8540-8d3e11d026c5",
+        "name": "wqnn.js",
+        "type": "JS_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "hh/wqnn.js",
+        "code": "exports.handler = function(event, context, callback) {\n    \n    callback(null, {\"message\": \"Successfully executed\"});\n}",
+        "config": {
+          "runtime": "nodejs8.10",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": []
+        },
+        "triggers": []
       }
     },
     "rootNode": "db271195-2710-48d5-8540-8d3e11d026c5",
@@ -153,9 +273,15 @@
       "1537c51f-82b7-4967-9392-2956141c2759",
       "d200a121-3b34-42e8-ad91-5efd116fdad7",
       "14aeb6d5-fee4-4e4d-9173-f773eaa5d600",
-      "7471b695-37f6-4e78-867c-872fb0aa84f1"
+      "7471b695-37f6-4e78-867c-872fb0aa84f1",
+      "20c66946-dd03-452a-beb8-abe8e9f69b49",
+      "a855cac3-8121-4911-956f-b3c874ce6239",
+      "9a2d24c2-36cc-4a35-8b8c-14414028acc4",
+      "e5c31757-adaa-4f00-bab6-0f8137ae9920",
+      "2064bb37-c44e-4f42-934f-9d3bd3a6fe9d",
+      "6a231ffc-1633-4eb2-bd1d-09d01277df9b"
     ],
-    "currentFileId": "7471b695-37f6-4e78-867c-872fb0aa84f1",
+    "currentFileId": "6a231ffc-1633-4eb2-bd1d-09d01277df9b",
     "resources": {
       "kinesisHiruTest": {
         "name": "kinesisHiruTest",
@@ -219,7 +345,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1571996452427
+    "lastSave": 1571996589779
   },
   "VCS_STATE": {
     "provider": "GitHub",
