@@ -9,7 +9,12 @@
         "isDirectory": true,
         "children": [
           "3e00dc62-0c68-4449-8201-ef3ba1ffe300",
-          "3f54cdd3-b5b4-4f34-901a-076d54d31429"
+          "3f54cdd3-b5b4-4f34-901a-076d54d31429",
+          "db30f8df-dd52-4ae1-8210-587a8cb148fa",
+          "1537c51f-82b7-4967-9392-2956141c2759",
+          "d200a121-3b34-42e8-ad91-5efd116fdad7",
+          "14aeb6d5-fee4-4e4d-9173-f773eaa5d600",
+          "7471b695-37f6-4e78-867c-872fb0aa84f1"
         ],
         "isRemovable": false,
         "filePath": "hh"
@@ -31,22 +36,7 @@
           "memory": 128,
           "layers": []
         },
-        "triggers": [
-          {
-            "resourceName": "kinesisHiruTest",
-            "config": {
-              "StartingPosition": "TRIM_HORIZON",
-              "BatchSize": "100"
-            }
-          },
-          {
-            "resourceName": "kinesishirutest2",
-            "config": {
-              "StartingPosition": "TRIM_HORIZON",
-              "BatchSize": "100"
-            }
-          }
-        ]
+        "triggers": []
       },
       "3f54cdd3-b5b4-4f34-901a-076d54d31429": {
         "id": "3f54cdd3-b5b4-4f34-901a-076d54d31429",
@@ -58,14 +48,114 @@
         "isRemovable": true,
         "filePath": "hh/test.html",
         "code": "<!DOCTYPE html>\n<html>\n<head>\n    <title>test</title>\n</head>\n<body>\n\n</body>\n</html>"
+      },
+      "db30f8df-dd52-4ae1-8210-587a8cb148fa": {
+        "id": "db30f8df-dd52-4ae1-8210-587a8cb148fa",
+        "parent": "db271195-2710-48d5-8540-8d3e11d026c5",
+        "name": "tt.js",
+        "type": "JS_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "hh/tt.js",
+        "code": "exports.handler = function(event, context, callback) {\n    \n    callback(null, {\"message\": \"Successfully executed\"});\n}",
+        "config": {
+          "runtime": "nodejs8.10",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": []
+        },
+        "triggers": []
+      },
+      "1537c51f-82b7-4967-9392-2956141c2759": {
+        "id": "1537c51f-82b7-4967-9392-2956141c2759",
+        "parent": "db271195-2710-48d5-8540-8d3e11d026c5",
+        "name": "t1.js",
+        "type": "JS_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "hh/t1.js",
+        "code": "exports.handler = function(event, context, callback) {\n    \n    callback(null, {\"message\": \"Successfully executed\"});\n}",
+        "config": {
+          "runtime": "nodejs8.10",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": []
+        },
+        "triggers": []
+      },
+      "d200a121-3b34-42e8-ad91-5efd116fdad7": {
+        "id": "d200a121-3b34-42e8-ad91-5efd116fdad7",
+        "parent": "db271195-2710-48d5-8540-8d3e11d026c5",
+        "name": "sts.js",
+        "type": "JS_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "hh/sts.js",
+        "code": "exports.handler = function(event, context, callback) {\n    \n    callback(null, {\"message\": \"Successfully executed\"});\n}",
+        "config": {
+          "runtime": "nodejs8.10",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": []
+        },
+        "triggers": []
+      },
+      "14aeb6d5-fee4-4e4d-9173-f773eaa5d600": {
+        "id": "14aeb6d5-fee4-4e4d-9173-f773eaa5d600",
+        "parent": "db271195-2710-48d5-8540-8d3e11d026c5",
+        "name": "ss.js",
+        "type": "JS_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "hh/ss.js",
+        "code": "exports.handler = function(event, context, callback) {\n    \n    callback(null, {\"message\": \"Successfully executed\"});\n}",
+        "config": {
+          "runtime": "nodejs8.10",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": []
+        },
+        "triggers": []
+      },
+      "7471b695-37f6-4e78-867c-872fb0aa84f1": {
+        "id": "7471b695-37f6-4e78-867c-872fb0aa84f1",
+        "parent": "db271195-2710-48d5-8540-8d3e11d026c5",
+        "name": "sam.js",
+        "type": "JS_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "hh/sam.js",
+        "code": "exports.handler = function(event, context, callback) {\n    \n    callback(null, {\"message\": \"Successfully executed\"});\n}",
+        "config": {
+          "runtime": "nodejs8.10",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": []
+        },
+        "triggers": []
       }
     },
     "rootNode": "db271195-2710-48d5-8540-8d3e11d026c5",
     "openFiles": [
       "3e00dc62-0c68-4449-8201-ef3ba1ffe300",
-      "3f54cdd3-b5b4-4f34-901a-076d54d31429"
+      "3f54cdd3-b5b4-4f34-901a-076d54d31429",
+      "db30f8df-dd52-4ae1-8210-587a8cb148fa",
+      "1537c51f-82b7-4967-9392-2956141c2759",
+      "d200a121-3b34-42e8-ad91-5efd116fdad7",
+      "14aeb6d5-fee4-4e4d-9173-f773eaa5d600",
+      "7471b695-37f6-4e78-867c-872fb0aa84f1"
     ],
-    "currentFileId": "3e00dc62-0c68-4449-8201-ef3ba1ffe300",
+    "currentFileId": "7471b695-37f6-4e78-867c-872fb0aa84f1",
     "resources": {
       "kinesisHiruTest": {
         "name": "kinesisHiruTest",
@@ -129,7 +219,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1571992638415
+    "lastSave": 1571996452427
   },
   "VCS_STATE": {
     "provider": "GitHub",
